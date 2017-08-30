@@ -8,4 +8,6 @@ LOCAL_PATH:= $(call my-dir)
 product = $(word 1, $(subst _, $(space), $(MTK_PROJECT)))
 ifeq ($(product), y20a)
 	include $(call all-makefiles-under, $(LOCAL_PATH)/common)
+else ifeq ($(product), y20b)
+	include $(call all-makefiles-under, $(LOCAL_PATH)/common)
 endif

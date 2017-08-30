@@ -5,7 +5,9 @@ include $(CLEAR_VARS)
 product = $(word 1, $(subst _, $(space), $(MTK_PROJECT)))
 ifeq ($(strip $(product)), y20a)
 	src := $(MTK_PROJECT)/bootaudio.mp3
-else 
+else ifeq ($(strip $(product)), y20b)
+	src := $(MTK_PROJECT)/bootaudio.mp3
+else
 	src := common/bootaudio.mp3
 endif
 

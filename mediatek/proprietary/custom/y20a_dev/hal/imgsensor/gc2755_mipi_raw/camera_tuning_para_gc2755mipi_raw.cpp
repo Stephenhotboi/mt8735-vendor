@@ -130,7 +130,7 @@ const NVRAM_CAMERA_ISP_PARAM_STRUCT CAMERA_ISP_DEFAULT_VALUE =
     },
 
     //bInvokeSmoothCCM
-    bInvokeSmoothCCM: MFALSE,
+    bInvokeSmoothCCM: MTRUE,
 
     DngMetadata:{
       0, // i4RefereceIlluminant1
@@ -244,7 +244,7 @@ const NVRAM_CAMERA_3A_STRUCT CAMERA_3A_NVRAM_DEFAULT_VALUE =
             TRUE,    // bEnableAntiOverExposure
             TRUE,    // bEnableTimeLPF
             FALSE,    // bEnableCaptureThres
-            TRUE,    // bEnableVideoThres
+            FALSE,    // bEnableVideoThres
             TRUE,    // bEnableVideo1Thres
             TRUE,    // bEnableVideo2Thres
             TRUE,    // bEnableCustom1Thres
@@ -253,9 +253,9 @@ const NVRAM_CAMERA_3A_STRUCT CAMERA_3A_NVRAM_DEFAULT_VALUE =
             TRUE,    // bEnableCustom4Thres
             TRUE,    // bEnableCustom5Thres
             TRUE,    // bEnableStrobeThres
-            68,    // u4AETarget
+            80,    // u4AETarget
             47,    // u4StrobeAETarget
-            20,    // u4InitIndex
+            95,    // u4InitIndex
             4,    // u4BackLightWeight
             32,    // u4HistStretchWeight
             4,    // u4AntiOverExpWeight
@@ -266,8 +266,8 @@ const NVRAM_CAMERA_3A_STRUCT CAMERA_3A_NVRAM_DEFAULT_VALUE =
             {1, 3, 5, 7, 8},    // u4LPFConvergeTable[AE_CCT_STRENGTH_NUM] 
             90,    // u4InDoorEV = 9.0, 10 base 
             -3,    // i4BVOffset delta BV = value/10 
-            64,    // u4PreviewFlareOffset
-            64,    // u4CaptureFlareOffset
+            0,    // u4PreviewFlareOffset
+            0,    // u4CaptureFlareOffset
             3,    // u4CaptureFlareThres
             64,    // u4VideoFlareOffset
             3,    // u4VideoFlareThres
@@ -338,7 +338,7 @@ const NVRAM_CAMERA_3A_STRUCT CAMERA_3A_NVRAM_DEFAULT_VALUE =
                     TRUE,//bEnableBlackLight
                     1024,//u4BackLightWeight
                     400,//u4Pcent
-                    34,//u4Thd
+                    22,//u4Thd
                     255, // center luminance
                     256, // final target limitation, 256/128 = 2x
                     //sFgBgEVRatio
@@ -826,8 +826,8 @@ const NVRAM_CAMERA_3A_STRUCT CAMERA_3A_NVRAM_DEFAULT_VALUE =
                 {
                     142,    // DayRightBound
                     -55,    // DayLeftBound
-                    -294,    // DayUpperBound
-                    -530    // DayLowerBound
+                    -254,    // DayUpperBound
+                    -466    // DayLowerBound
                 },
                 // Shade
                 {
@@ -838,10 +838,10 @@ const NVRAM_CAMERA_3A_STRUCT CAMERA_3A_NVRAM_DEFAULT_VALUE =
                 },
                 // Daylight Fluorescent
                 {
-                    0,    // DFRightBound
-                    0,    // DFLeftBound
-                    0,    // DFUpperBound
-                    0    // DFLowerBound
+                    160,    // DFRightBound
+                    -55,    // DFLeftBound
+                    -464,    // DFUpperBound
+                    -539    // DFLowerBound
                 }
             },
             // PWB light area
@@ -857,29 +857,29 @@ const NVRAM_CAMERA_3A_STRUCT CAMERA_3A_NVRAM_DEFAULT_VALUE =
                 {
                     167,    // PDayRightBound
                     -55,    // PDayLeftBound
-                    -294,    // PDayUpperBound
-                    -530    // PDayLowerBound
+                    -254,    // PDayUpperBound
+                    -466    // PDayLowerBound
                 },
                 // Cloudy daylight
                 {
                     267,    // PCloudyRightBound
                     92,    // PCloudyLeftBound
-                    -294,    // PCloudyUpperBound
-                    -530    // PCloudyLowerBound
+                    -254,    // PCloudyUpperBound
+                    -466    // PCloudyLowerBound
                 },
                 // Shade
                 {
                     367,    // PShadeRightBound
                     92,    // PShadeLeftBound
-                    -294,    // PShadeUpperBound
-                    -530    // PShadeLowerBound
+                    -254,    // PShadeUpperBound
+                    -466    // PShadeLowerBound
                 },
                 // Twilight
                 {
                     -55,    // PTwiRightBound
                     -215,    // PTwiLeftBound
-                    -294,    // PTwiUpperBound
-                    -530    // PTwiLowerBound
+                    -254,    // PTwiUpperBound
+                    -466    // PTwiLowerBound
                 },
                 // Fluorescent
                 {
@@ -899,8 +899,8 @@ const NVRAM_CAMERA_3A_STRUCT CAMERA_3A_NVRAM_DEFAULT_VALUE =
                 {
                     -176,    // PIncaRightBound
                     -376,    // PIncaLeftBound
-                    -294,    // PIncaUpperBound
-                    -530    // PIncaLowerBound
+                    -254,    // PIncaUpperBound
+                    -466    // PIncaLowerBound
                 },
                 // Gray World
                 {
@@ -914,27 +914,27 @@ const NVRAM_CAMERA_3A_STRUCT CAMERA_3A_NVRAM_DEFAULT_VALUE =
             {
                 // Daylight
                 {
-                    965,    // PWB_Day_R
+                    899,    // PWB_Day_R
                     512,    // PWB_Day_G
-                    829    // PWB_Day_B
+                    773    // PWB_Day_B
                 },
                 // Cloudy daylight
                 {
-                    1140,    // PWB_Cloudy_R
+                    1063,    // PWB_Cloudy_R
                     512,    // PWB_Cloudy_G
-                    701    // PWB_Cloudy_B
+                    654    // PWB_Cloudy_B
                 },
                 // Shade
                 {
-                    1220,    // PWB_Shade_R
+                    1137,    // PWB_Shade_R
                     512,    // PWB_Shade_G
-                    655    // PWB_Shade_B
+                    611    // PWB_Shade_B
                 },
                 // Twilight
                 {
-                    745,    // PWB_Twi_R
+                    694,    // PWB_Twi_R
                     512,    // PWB_Twi_G
-                    1074    // PWB_Twi_B
+                    1001    // PWB_Twi_B
                 },
                 // Fluorescent
                 {
@@ -950,9 +950,9 @@ const NVRAM_CAMERA_3A_STRUCT CAMERA_3A_NVRAM_DEFAULT_VALUE =
                 },
                 // Incandescent
                 {
-                    616,    // PWB_Inca_R
+                    574,    // PWB_Inca_R
                     512,    // PWB_Inca_G
-                    1300    // PWB_Inca_B
+                    1211    // PWB_Inca_B
                 },
                 // Gray World
                 {
@@ -980,7 +980,7 @@ const NVRAM_CAMERA_3A_STRUCT CAMERA_3A_NVRAM_DEFAULT_VALUE =
                 },
                 // Sunset Area
                 {
-                    30,   // i4Sunset_BoundXr_Thr
+                    -8,   // i4Sunset_BoundXr_Thr
                     -294    // i4Sunset_BoundYr_Thr
                 },
                 // Sunset Vertex
@@ -990,8 +990,8 @@ const NVRAM_CAMERA_3A_STRUCT CAMERA_3A_NVRAM_DEFAULT_VALUE =
                 },
                 // Shade F Area
                 {
-                    -135,   // i4BoundXrThr
-                    -345    // i4BoundYrThr
+                    -77,   // i4BoundXrThr
+                    -296    // i4BoundYrThr
                 },
                 // Shade F Vertex
                 {
@@ -1000,7 +1000,7 @@ const NVRAM_CAMERA_3A_STRUCT CAMERA_3A_NVRAM_DEFAULT_VALUE =
                 },
                 // Shade CWF Area
                 {
-                    -200,   // i4BoundXrThr
+                    -85,   // i4BoundXrThr
                     -500    // i4BoundYrThr
                 },
                 // Shade CWF Vertex

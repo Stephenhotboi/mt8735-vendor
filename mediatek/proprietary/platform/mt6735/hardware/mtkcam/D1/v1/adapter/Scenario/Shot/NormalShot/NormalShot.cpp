@@ -282,7 +282,7 @@ onCmd_capture()
             eImgFmt_YUY2,                    //yuv format 
             mShotParam.mi4PictureWidth,      //picutre width 
             mShotParam.mi4PictureHeight,     //picture height
-            mShotParam.mu4Transform,         //picture transform 
+            1, //mShotParam.mu4Transform,         //picture transform 
             ePostViewFmt,                    //postview format 
             mShotParam.mi4PostviewWidth,     //postview width 
             mShotParam.mi4PostviewHeight,    //postview height 
