@@ -198,30 +198,23 @@ static int on_uevent(const char *buf, int len_buf)
 		led_count++;
 		bc = get_capacity();
 		CHG_sta = get_int_value(CHG_DET_PATH);
-		if(get_int_value(CHG_DET_PATH) == 1 && led_count >= 2)
+		if(get_int_value(CHG_DET_PATH) == 1 && led_count >= 5)
 		{
 			led_count = 0;
-			if(bc >=100)
-			{
-				setchg_breathled_color("ear", "Green");
-				setchg_breathled_frequency("ear", "Const");
-				setchg_breathled_color("chest","Green");
-				setchg_breathled_frequency("chest", "Const");
-			}
-			else if (bc >15 && bc <100 ) {
+			if (bc >= 90 ) {
 				lights_full();
 				setchg_breathled_color("ear", "Green");
 				setchg_breathled_color("chest","Green");
 			}
-			else if(bc <= 15){
+			else if(bc < 15){
 				setchg_breathled_color("ear", "Red");
 				setchg_breathled_color("chest","Red");			
 			}else {
 				if (nCurrentState != LIGHTS_STATE_CHGON)
 					set_light_state(LIGHTS_CHGON);
 				lights_on();
-				//setchg_breathled_color("ear", "Yellow");
-				//setchg_breathled_color("chest","Yellow");			
+				setchg_breathled_color("ear", "Yellow");
+				setchg_breathled_color("chest","Yellow");			
 			}
 		}
 		else if (get_int_value(CHG_DET_PATH) == 0)

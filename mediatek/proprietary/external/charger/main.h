@@ -164,7 +164,6 @@ int get_voltage();
 
 int setchg_breathled_color(char *led, char *clr);//daviekuo
 int setchg_breathled_onoff(char *led, char *sta);//daviekuo
-int setchg_breathled_frequency(char *led, char *clr)	;
 
 void stop_backlight();
 void start_backlight();

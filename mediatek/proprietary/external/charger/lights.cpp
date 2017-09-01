@@ -44,7 +44,6 @@
 
 #define BREATHLED_COLOR_PATH "/sys/devices/virtual/yyd/breathleds/color"
 #define BREATHLED_ONOFF_PATH "/sys/devices/virtual/yyd/breathleds/onoff"
-#define BREATHLED_FRQUENCY_PATH "/sys/devices/virtual/yyd/breathleds/frequency"
 
 static int led_green_isOn = CONTROL_UNKNOWN;
 static int led_red_isOn = CONTROL_UNKNOWN;
@@ -52,38 +51,6 @@ static int nChargingFull = CONTROL_UNKNOWN;
 static int nChargingRemoved = CONTROL_UNKNOWN;
 
 pthread_mutex_t lights_mutex;
-
-int setchg_breathled_frequency(char *led, char *clr)		//daviekuo
-{
-	char ctl[3] = {0};
-	if(!strcmp(led, "ear"))
-	{
-		ctl[0] = 'E';
-	}
-	else if(!strcmp(led, "chest"))
-	{
-		ctl[0] = 'C';	
-	}
-
-	if(!strcmp(clr, "Const"))
-	{
-		ctl[1] = 'c';	
-	}
-	else if(!strcmp(clr, "Low"))
-	{
-		ctl[1] = 'l';	
-	}
-	else if(!strcmp(clr, "High"))
-	{
-		ctl[1] = 'h';	
-	}
-	else if(!strcmp(clr, "Might"))
-	{
-		ctl[1] = 'm';	
-	}
-	ctl[2] = '\0';
-	return write_to_file(BREATHLED_FRQUENCY_PATH, ctl, 3);
-}
 
 int setchg_breathled_color(char *led, char *clr)		//daviekuo
 {
