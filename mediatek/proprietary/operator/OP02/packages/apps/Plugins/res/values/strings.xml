@@ -43,14 +43,14 @@
     <string name="menu_sim_sms" >"SIM SMS"</string>
     <string name="screen_timeout_CU">Screen timeout</string> 
     <!-- Browser String Start-->
-    <!--<string name="homepage_for_op02" translatable="false">http://www.wo.com.cn</string>-->
-	<string name="homepage_for_op02" translatable="false">https://www.baidu.com</string>
+    <!-- <string name="homepage_for_op02" translatable="false">http://www.wo.com.cn</string>-->
+    <string name="homepage_for_op02" translatable="false">https://www.baidu.com</string>
     <!-- Bookmarks -->
     <string-array name="bookmarks_for_op02" translatable="false">
-         <!--<item>沃门户</item>-->
-         <!--<item translatable="false">http://www.wo.com.cn</item>-->
-         <item>百度一下</item> 
-         <item translatable="false">https://www.baidu.com</item>		
+        <!-- <item>沃门户</item>
+        <item translatable="false">http://www.wo.com.cn</item>-->
+        <item>百度一下</item>
+        <item translatable="false">https://www.baidu.com</item>
     </string-array>   
     <array name="bookmark_preloads_for_op02">
         <item>@raw/op02_favicon_wo</item>

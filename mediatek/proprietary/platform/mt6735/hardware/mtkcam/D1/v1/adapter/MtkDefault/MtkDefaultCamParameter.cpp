@@ -240,12 +240,7 @@ setParameters()
     // AE lock 
     {
         String8 const s = mpParamsMgr->getStr(CameraParameters::KEY_AUTO_EXPOSURE_LOCK);
-        cam3aParam.bIsAELock = ( ! s.isEmpty() && s == CameraParameters::TRUE ) ? 1 : 0;
-		#ifdef CUSTOM_HAL_SUB_AELOCK							//==== start ===== 此宏只在y20a定义
-		MY_LOGD("davie modified getOpenId(): (%d)", getOpenId());//  davie  yyd 16.10.31
-		if(getOpenId())											//	此处添加三行，只为y20a的红外笔功能，如果无红外笔功能 "一定要删掉" 此三行
-			cam3aParam.bIsAELock = 1;							//	或者检查 CUSTOM_HAL_SUB_AELOCK 是否定义了
-		#endif													//====== end ======	
+        cam3aParam.bIsAELock = ( ! s.isEmpty() && s == CameraParameters::TRUE ) ? 1 : 0; 
     }
     // AWB lock 
     {

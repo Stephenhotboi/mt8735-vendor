@@ -49,7 +49,6 @@
 #define BKL_LCD_PATH "/sys/class/leds/lcd-backlight/brightness"
 #define BOOTMODE_PATH "/sys/class/BOOT/BOOT/boot/boot_mode"
 
-#define CHG_DET_PATH "/dev/misc-yyd"
 static int bc = 0;
 static int firstTime = 0;
 int inDraw = 0;
@@ -185,7 +184,6 @@ static int lights_exit()
 
 static int on_uevent(const char *buf, int len_buf)
 {
-	static int led_count = 0,CHG_sta = 0;
 #ifdef VERBOSE_OUTPUT
 	KPOC_LOGI("on_uevent, %s\n", buf);
 #endif
@@ -195,32 +193,14 @@ static int on_uevent(const char *buf, int len_buf)
 	//if ac or usb online
 	if (is_charging_source_available()) 
 	{
-		led_count++;
 		bc = get_capacity();
-		CHG_sta = get_int_value(CHG_DET_PATH);
-		if(get_int_value(CHG_DET_PATH) == 1 && led_count >= 5)
-		{
-			led_count = 0;
-			if (bc >= 90 ) {
-				lights_full();
-				setchg_breathled_color("ear", "Green");
-				setchg_breathled_color("chest","Green");
-			}
-			else if(bc < 15){
-				setchg_breathled_color("ear", "Red");
-				setchg_breathled_color("chest","Red");			
-			}else {
-				if (nCurrentState != LIGHTS_STATE_CHGON)
-					set_light_state(LIGHTS_CHGON);
-				lights_on();
-				setchg_breathled_color("ear", "Yellow");
-				setchg_breathled_color("chest","Yellow");			
-			}
-		}
-		else if (get_int_value(CHG_DET_PATH) == 0)
-		{
-			setchg_breathled_onoff("ear", "off");
-			setchg_breathled_onoff("chest","off");
+
+		if (bc >= 90) {
+			lights_full();
+		} else {
+			if (nCurrentState != LIGHTS_STATE_CHGON)
+                set_light_state(LIGHTS_CHGON);
+			lights_on();
 		}
 	}
 	else

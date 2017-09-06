@@ -42,67 +42,12 @@
 #define LED_RED_PATH "/sys/class/leds/red/brightness"
 #define LED_GREEN_PATH "/sys/class/leds/green/brightness"
 
-#define BREATHLED_COLOR_PATH "/sys/devices/virtual/yyd/breathleds/color"
-#define BREATHLED_ONOFF_PATH "/sys/devices/virtual/yyd/breathleds/onoff"
-
 static int led_green_isOn = CONTROL_UNKNOWN;
 static int led_red_isOn = CONTROL_UNKNOWN;
 static int nChargingFull = CONTROL_UNKNOWN;
 static int nChargingRemoved = CONTROL_UNKNOWN;
 
 pthread_mutex_t lights_mutex;
-
-int setchg_breathled_color(char *led, char *clr)		//daviekuo
-{
-	char ctl[3] = {0};
-	if(!strcmp(led, "ear"))
-	{
-		ctl[0] = 'E';
-	}
-	else if(!strcmp(led, "chest"))
-	{
-		ctl[0] = 'C';	
-	}
-
-	if(!strcmp(clr, "Red"))
-	{
-		ctl[1] = 'R';	
-	}
-	else if(!strcmp(clr, "Green"))
-	{
-		ctl[1] = 'G';	
-	}
-	else if(!strcmp(clr, "Yellow"))
-	{
-		ctl[1] = 'X';	
-	}
-	ctl[2] = '\0';
-	return write_to_file(BREATHLED_COLOR_PATH, ctl, 3);
-}
-int setchg_breathled_onoff(char *led, char *sta)		//daviekuo
-{
-	char ctl[3] = {0};
-	if(!strcmp(led, "ear"))
-	{
-		ctl[0] = 'E';
-	}
-	else if(!strcmp(led, "chest"))
-	{
-		ctl[0] = 'C';	
-	}
-
-	if(!strcmp(sta, "on"))
-	{
-		ctl[1] = '1';	
-	}
-	else if(!strcmp(sta, "off"))
-	{
-		ctl[1] = '0';	
-	}
-	
-	ctl[2] = '\0';
-	return write_to_file(BREATHLED_ONOFF_PATH, ctl, 3);
-}
 
 void start_red_led(int skew)
 {

@@ -219,7 +219,6 @@ ImgSensorDrv::impSearchSensor(pfExIdChk pExIdChkCbf)
         //
         for (i = 0; i < MAX_NUM_OF_SUPPORT_SENSOR; i++) {
             //end of driver list
-            if((SensorEnum == DUAL_CAMERA_SUB_SENSOR) && (i == 0)) continue;
             if (m_pstSensorInitFunc[i].getCameraDefault == NULL) {
                 LOG_MSG("m_pstSensorInitFunc[i].getCameraDefault is NULL: %d \n", i);
                 break;

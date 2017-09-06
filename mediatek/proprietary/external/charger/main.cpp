@@ -85,7 +85,7 @@ int main(int argc, char *argv[])
     for (i=0; i< ARRAY_SIZE(pwrkeys); i++)
         KPOC_LOGI("pwrkeys[%d]:%d\n",i,pwrkeys[i]);
 
-    key_control(pwrkeys, ARRAY_SIZE(pwrkeys)); //will loop inside
+    key_control(pwrkeys, ARRAY_SIZE(pwrkeys)); //will loop inside   
     
     return 0;
 }

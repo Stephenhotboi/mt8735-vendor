@@ -440,7 +440,7 @@ int anim_fb_init(void)
     }
 
     // test code
-    phical_screen.rotation = 0;      
+//    phical_screen.rotation = 0;      
 //    phical_screen.needAllign = 0;
     
     LOG_ANIM("[show_logo_common]phical_screen: width= %d,height= %d,bits_per_pixel =%d,needAllign = %d,allignWidth=%d rotation =%d ,need180Adjust = %d\n",

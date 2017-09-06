@@ -41,11 +41,11 @@ include $(CLEAR_VARS)
 
 #Be used to YYD product
 product = $(word 1, $(subst _, $(space), $(MTK_PROJECT)))
-ifeq ($(strip $(product)), y20a)
+ifeq ($(strip $(product)), y50bpro)
 	LOCAL_PATH := $(LOCAL_PATH)/$(MTK_PROJECT)
-else ifeq ($(strip $(product)), y20b)
+else ifeq ($(strip $(product)), r150a)
 	LOCAL_PATH := $(LOCAL_PATH)/$(MTK_PROJECT)
-else 
+else
 	# Specify LTE path 
 	ifeq ($(strip $(MTK_LTE_SUPPORT)), yes)
 		LOCAL_PATH := $(LOCAL_PATH)/LTE

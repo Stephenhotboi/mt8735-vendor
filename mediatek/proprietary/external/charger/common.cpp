@@ -56,7 +56,7 @@
 int showLowBattLogo = false;
 int inExiting = false;
 
-int write_to_file(const char* path, const char* buf, int size)
+static int write_to_file(const char* path, const char* buf, int size)
 {
     if (!path) {
         KPOC_LOGE("null path to write");

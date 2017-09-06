@@ -144,7 +144,6 @@ extern int inDraw;
 extern int VBAT_POWER_ON;
 extern int VBAT_POWER_OFF;
 
-int write_to_file(const char* path, const char* buf, int size);	//daviekuo
 int get_int_value(const char * path);
 void set_int_value(const char * path, const int value);
 int get_battnotify_status();
@@ -161,9 +160,6 @@ int is_charging_source_available();
 
 bool time_exceed(struct timeval start, int duration_sec);
 int get_voltage();
-
-int setchg_breathled_color(char *led, char *clr);//daviekuo
-int setchg_breathled_onoff(char *led, char *sta);//daviekuo
 
 void stop_backlight();
 void start_backlight();

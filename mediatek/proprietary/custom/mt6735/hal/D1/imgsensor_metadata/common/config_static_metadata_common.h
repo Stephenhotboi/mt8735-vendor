@@ -62,11 +62,11 @@ STATIC_METADATA_BEGIN(DEVICE, CAMERA, COMMON)
     case 0:
         //======================================================================
         CONFIG_METADATA_BEGIN(MTK_SENSOR_INFO_ORIENTATION)
-            CONFIG_ENTRY_VALUE(0, MINT32)
+            CONFIG_ENTRY_VALUE(90, MINT32)
         CONFIG_METADATA_END()
         //======================================================================
         CONFIG_METADATA_BEGIN(MTK_SENSOR_INFO_WANTED_ORIENTATION)
-            CONFIG_ENTRY_VALUE(0, MINT32)
+            CONFIG_ENTRY_VALUE(90, MINT32)
         CONFIG_METADATA_END()
         //======================================================================
         CONFIG_METADATA_BEGIN(MTK_SENSOR_INFO_FACING)
@@ -82,15 +82,15 @@ STATIC_METADATA_BEGIN(DEVICE, CAMERA, COMMON)
     case 1:
         //======================================================================
         CONFIG_METADATA_BEGIN(MTK_SENSOR_INFO_ORIENTATION)
-            CONFIG_ENTRY_VALUE(0, MINT32)
+            CONFIG_ENTRY_VALUE(270, MINT32)
         CONFIG_METADATA_END()
         //======================================================================
         CONFIG_METADATA_BEGIN(MTK_SENSOR_INFO_WANTED_ORIENTATION)
-            CONFIG_ENTRY_VALUE(0, MINT32)
+            CONFIG_ENTRY_VALUE(270, MINT32)
         CONFIG_METADATA_END()
         //======================================================================
         CONFIG_METADATA_BEGIN(MTK_SENSOR_INFO_FACING)
-            CONFIG_ENTRY_VALUE(MTK_LENS_FACING_FRONT, MUINT8)  
+            CONFIG_ENTRY_VALUE(MTK_LENS_FACING_FRONT, MUINT8)
         CONFIG_METADATA_END()
          //======================================================================
         CONFIG_METADATA_BEGIN(MTK_HAL_VERSION)

@@ -3,9 +3,9 @@ include $(CLEAR_VARS)
 
 #Be used to YYD product
 product = $(word 1, $(subst _, $(space), $(MTK_PROJECT)))
-ifeq ($(strip $(product)), y20a)
+ifeq ($(strip $(product)), y50bpro)
 	src := $(MTK_PROJECT)/bootaudio.mp3
-else ifeq ($(strip $(product)), y20b)
+else ifeq ($(strip $(product)), r150a)
 	src := $(MTK_PROJECT)/bootaudio.mp3
 else
 	src := common/bootaudio.mp3
