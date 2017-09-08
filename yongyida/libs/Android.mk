@@ -8,6 +8,6 @@ endif
 product = $(word 1, $(subst _, $(space), $(MTK_PROJECT)))
 ifeq ($(product), y50bpro)
     include $(call all-makefiles-under,$(LOCAL_PATH)/common)
-else ifeq ($(product), r150a)
+else ifeq ($(product), y128a)
     include $(call all-makefiles-under,$(LOCAL_PATH)/common)
 endif

@@ -43,7 +43,7 @@ include $(CLEAR_VARS)
 product = $(word 1, $(subst _, $(space), $(MTK_PROJECT)))
 ifeq ($(strip $(product)), y50bpro)
 	LOCAL_PATH := $(LOCAL_PATH)/$(MTK_PROJECT)
-else ifeq ($(strip $(product)), r150a)
+else ifeq ($(strip $(product)), y128a)
 	LOCAL_PATH := $(LOCAL_PATH)/$(MTK_PROJECT)
 else
 	# Specify LTE path 
