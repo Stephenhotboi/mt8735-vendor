@@ -169,41 +169,41 @@ typedef enum
 
 /* verno of data items */
 /* audio file version */
-#define AP_CFG_RDCL_FILE_AUDIO_LID_VERNO			"001"
+#define AP_CFG_RDCL_FILE_AUDIO_LID_VERNO			"002"
 
 /* GPS file version */
 #define AP_CFG_CUSTOM_FILE_GPS_LID_VERNO			"000"
 
 /* audio acf file version */
-#define AP_CFG_RDCL_FILE_AUDIO_COMPFLT_LID_VERNO	"001"
+#define AP_CFG_RDCL_FILE_AUDIO_COMPFLT_LID_VERNO	"002"
 
 /* audio hcf file version */
-#define AP_CFG_RDCL_FILE_HEADPHONE_COMPFLT_LID_VERNO	"001"
+#define AP_CFG_RDCL_FILE_HEADPHONE_COMPFLT_LID_VERNO	"002"
 /* audio vibspk hcf file version */
-#define AP_CFG_RDCL_FILE_VIBSPK_COMPFLT_LID_VERNO	"001"
+#define AP_CFG_RDCL_FILE_VIBSPK_COMPFLT_LID_VERNO	"002"
 
 /* audio effect file version */
-#define AP_CFG_RDCL_FILE_AUDIO_EFFECT_LID_VERNO	"001"
+#define AP_CFG_RDCL_FILE_AUDIO_EFFECT_LID_VERNO	"002"
 
 /* audio med file version */
 #define AP_CFG_RDCL_FILE_AUDIO_PARAM_MED_LID_VERNO  "001"
 
 /* audio volume custom file version */
-#define AP_CFG_RDCL_FILE_AUDIO_VOLUME_CUSTOM_LID_VERNO  "001"
-#define AP_CFG_RDCL_FILE_AUDIO_VER1_VOLUME_CUSTOM_LID_VERNO  "001"
+#define AP_CFG_RDCL_FILE_AUDIO_VOLUME_CUSTOM_LID_VERNO  "002"
+#define AP_CFG_RDCL_FILE_AUDIO_VER1_VOLUME_CUSTOM_LID_VERNO  "002"
 
 /* dual mic custom file version */
 #define AP_CFG_RDCL_FILE_DUAL_MIC_CUSTOM_LID_VERNO  "002"
 
 /* audio wb specch param custom file version */
-#define AP_CFG_RDCL_FILE_AUDIO_WB_PARAM_LID_VERNO "001"
+#define AP_CFG_RDCL_FILE_AUDIO_WB_PARAM_LID_VERNO "002"
 
 /* audio gain table custom file version */
-#define AP_CFG_RDCL_FILE_AUDIO_GAIN_TABLE_LID_VERNO "001"
+#define AP_CFG_RDCL_FILE_AUDIO_GAIN_TABLE_LID_VERNO "002"
 
 /* audio hd record par custom file version*/
-#define AP_CFG_RDCL_FILE_AUDIO_HD_REC_PAR_LID_VERNO "001"
-#define AP_CFG_RDCL_FILE_AUDIO_HD_REC_SCENE_LID_VERNO "001"
+#define AP_CFG_RDCL_FILE_AUDIO_HD_REC_PAR_LID_VERNO "002"
+#define AP_CFG_RDCL_FILE_AUDIO_HD_REC_SCENE_LID_VERNO "002"
 
 /* audio buffer dc calibration custom file version*/
 #define AP_CFG_RDCL_FILE_AUDIO_BUFFER_DC_CALIBRATION_PAR_LID_VERNO "000"

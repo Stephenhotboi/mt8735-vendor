@@ -161,7 +161,7 @@
 	#define BAR_RIGHT           (574)
 	#define BAR_BOTTOM          (641)
 
-#elif defined(HD720) || defined(CU_HD720) || defined(CMCC_HD720) || defined(CT_HD720) || defined(CMCC_LTE_HD720) || defined(CT_LTE_HD720) || defined(CU_LTE_HD720) || defined(Y50BPRO_DEV) || defined(Y128A_DEV)
+#elif defined(HD720) || defined(CU_HD720) || defined(CMCC_HD720) || defined(CT_HD720) || defined(CMCC_LTE_HD720) || defined(CT_LTE_HD720) || defined(CU_LTE_HD720) || defined(Y50BPRO_DEV) || defined(Y50BPRO_BJT)
 	// hd720 720*1280
 #ifndef HD720_RATATION90
 	// battery capacity rectangle
